@@ -8,6 +8,26 @@ form.addEventListener("submit", function (event) {
   event.preventDefault();
   const newMeme = makeMeme(imgInput.value, topTextInput.value, botTextInput.value);
   results.appendChild(newMeme);
+
+  imgInput.value = "";
+  topTextInput.value = "";
+  botTextInput.value = "";
+});
+
+// commented out code below did not work. used event delegation instead on results container
+// let memes = document.querySelectorAll(".meme");
+
+// for (let meme of memes) {
+//   meme.addEventListener("click", function (e) {
+//     e.target.remove();
+//   });
+// }
+
+results.addEventListener("click", function (e) {
+  console.log(e.target.tagName);
+  if (e.target.tagName === "IMG") {
+    e.target.parentElement.remove();
+  }
 });
 
 function makeMeme(url, topText, botText) {

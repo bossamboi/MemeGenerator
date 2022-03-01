@@ -13,17 +13,27 @@ main {
   background-color: rgb(238, 244, 252);
 }
 
+#results {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
 .meme {
   position: relative;
   width: 500px;
 }
 
 .meme:hover {
+  cursor: pointer;
+  opacity: 50%;
 }
 
 .pic {
   width: 500px;
   border-radius: 2%;
+  margin: 10px;
 }
 
 .toptext {
