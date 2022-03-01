@@ -5,6 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meme Generator</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/bootstrap-utilities.css" />
+    <link rel="stylesheet" href="app.css" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1 class="my-3">Make Memez</h1>
+    </header>
+    <main>
+      <form class="container" action="">
+        <div class="row">
+          <label for="image" class="col my-3">Image Link:</label>
+          <input
+            class="col-10 my-3"
+            type="url"
+            id="image"
+            name="image"
+            placeholder="image url is required"
+            required
+          />
+        </div>
+        <div class="row">
+          <label for="top-text" class="col my-3">Top Text:</label>
+          <input
+            class="col-10 my-3"
+            type="text"
+            id="top-text"
+            name="top-text"
+            placeholder="optional"
+          />
+        </div>
+        <div class="row">
+          <label for="bot-text" class="col my-3">Bottom Text:</label>
+          <input
+            class="col-10 my-3"
+            type="text"
+            id="bot-text"
+            name="bot-text"
+            placeholder="optional"
+          />
+        </div>
+        <div class="button">
+          <button type="submit" class="btn btn-dark">Submit</button>
+        </div>
+      </form>
+    </main>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="app.js"></script>
+  </body>
 </html>
