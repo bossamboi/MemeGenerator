@@ -5,6 +5,13 @@ h1 {
   font-weight: 200;
 }
 
+#footnote {
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 300;
+}
+
 .button {
   text-align: center;
 }
