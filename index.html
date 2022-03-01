@@ -10,15 +10,15 @@
     <link rel="stylesheet" href="app.css" />
   </head>
   <body>
-    <header>
-      <h1 class="my-3">Make Memez</h1>
-    </header>
-    <main>
-      <form class="container" action="">
+    <main class="mb-3">
+      <header>
+        <h1 class="py-3">Make Memez</h1>
+      </header>
+      <form class="container" id="memeform" action="">
         <div class="row">
-          <label for="image" class="col my-3">Image Link:</label>
+          <label for="image" class="col-md-2 my-md-3">Image Link:</label>
           <input
-            class="col-10 my-3"
+            class="col-md-10 my-md-3"
             type="url"
             id="image"
             name="image"
@@ -27,9 +27,9 @@
           />
         </div>
         <div class="row">
-          <label for="top-text" class="col my-3">Top Text:</label>
+          <label for="top-text" class="col-md-2 my-md-3 mt-3">Top Text:</label>
           <input
-            class="col-10 my-3"
+            class="col-md-10 my-md-3"
             type="text"
             id="top-text"
             name="top-text"
@@ -37,9 +37,9 @@
           />
         </div>
         <div class="row">
-          <label for="bot-text" class="col my-3">Bottom Text:</label>
+          <label for="bot-text" class="col-md-2 my-md-3 mt-3">Bottom Text:</label>
           <input
-            class="col-10 my-3"
+            class="col-md-10 my-md-3"
             type="text"
             id="bot-text"
             name="bot-text"
@@ -47,10 +47,23 @@
           />
         </div>
         <div class="button">
-          <button type="submit" class="btn btn-dark">Submit</button>
+          <button type="submit" class="btn btn-dark mt-3 mb-4">Submit</button>
         </div>
       </form>
     </main>
+
+    <section class="container" id="results">
+      <!-- <div class="meme">
+        <img
+          class="pic"
+          src="https://i.natgeofe.com/n/46b07b5e-1264-42e1-ae4b-8a021226e2d0/domestic-cat_thumb_square.jpg"
+          alt=""
+        />
+        <div class="toptext">TOP TEXT</div>
+        <div class="bottomtext">BOTTOM TEXT</div>
+      </div> -->
+    </section>
+
     <script src="js/bootstrap.bundle.js"></script>
     <script src="app.js"></script>
   </body>
