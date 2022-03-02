@@ -25,7 +25,7 @@ form.addEventListener("submit", function (event) {
 
 results.addEventListener("click", function (e) {
   console.log(e.target.tagName);
-  if (e.target.tagName === "IMG") {
+  if (e.target.tagName === "IMG" || e.target.tagName === "DIV") {
     e.target.parentElement.remove();
   }
 });
@@ -39,9 +39,18 @@ function makeMeme(url, topText, botText) {
   memeDiv.setAttribute("class", "meme");
   imgDiv.setAttribute("class", "pic");
   imgDiv.setAttribute("src", url);
-  topTextDiv.setAttribute("class", "toptext");
+  if (topText.length > 25) {
+    topTextDiv.setAttribute("class", "toptextlong");
+  } else {
+    topTextDiv.setAttribute("class", "toptext");
+  }
   topTextDiv.innerText = topText.toUpperCase();
-  botTextDiv.setAttribute("class", "bottomtext");
+
+  if (botText.length > 25) {
+    botTextDiv.setAttribute("class", "bottomtextlong");
+  } else {
+    botTextDiv.setAttribute("class", "bottomtext");
+  }
   botTextDiv.innerText = botText.toUpperCase();
 
   memeDiv.append(imgDiv, topTextDiv, botTextDiv);
